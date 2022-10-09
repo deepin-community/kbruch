@@ -1,0 +1,739 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY kappname "&kbruch;">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"><!-- change language only here -->
+]>
+<!--
+SPDX-FileCopyrightText: 2001-2005 Sebastian Stein <seb.kde@hpfsc.de>
+SPDX-FileCopyrightText: 2008 Anne-Marie Mahfouf
+SPDX-License-Identifier: GFDL-1.2-only
+-->
+<book id="kbruch" lang="&language;">
+
+<bookinfo>
+<title>The &kbruch; Handbook</title>
+
+<authorgroup>
+<author>
+<firstname>Sebastian</firstname>
+<surname>Stein</surname>
+<email>seb.kde@hpfsc.de</email>
+</author>
+<author>
+&Anne-Marie.Mahfouf;
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+
+</authorgroup>
+
+<copyright>
+<year>2001-2005</year>
+<holder>Sebastian Stein</holder>
+</copyright>
+<copyright>
+<year>2008</year>
+<holder>&Anne-Marie.Mahfouf;</holder>
+</copyright>
+<legalnotice>&FDLNotice;</legalnotice>
+
+<date>2020-12-21</date>
+<releaseinfo>Applications 20.12</releaseinfo>
+
+<abstract>
+<para>&kbruch; is a small program to practice calculating with fractions and percentages.
+Different exercises are provided for this purpose and you can use the learning mode to practice with fractions. The program checks the user's
+input and gives feedback.
+</para>
+
+</abstract>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>education</keyword>
+<keyword>fraction</keyword>
+<keyword>percentage</keyword>
+<keyword>mathematics</keyword>
+<keyword>denominator</keyword>
+<keyword>kbruch</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title>Introduction</title>
+
+<para>
+&kbruch; is a small program to practice calculating with fractions and percentages. Six different exercises
+are offered as well as a learning mode.
+</para>
+
+<itemizedlist>
+	<listitem><para>
+		<guilabel>Arithmetic</guilabel> - in this exercise you have to solve a given fraction task.
+You have to enter the numerator and the denominator. This is the main exercise.
+	</para></listitem>
+	<listitem><para>
+		<guilabel>Comparison</guilabel> - in this exercise you have to compare the size of 2 given
+fractions, using the symbols <guibutton>&gt;</guibutton>, <guibutton>&lt;</guibutton>
+or <guibutton>=</guibutton>.
+	</para></listitem>
+	<listitem><para>
+		<guilabel>Conversion</guilabel> - in this exercise you have to convert a given number
+into a fraction.
+	</para></listitem>
+	<listitem><para>
+		<guilabel>Mixed Numbers</guilabel> - in this exercise you have to convert a mixed number into an improper fraction
+		(ratio) and vice versa.
+	</para></listitem>
+	<listitem><para>
+		<guilabel>Factorization</guilabel> - in this exercise you have to factorize a given number
+		into its prime factors.
+	</para></listitem>
+	<listitem><para>
+		<guilabel>Percentage</guilabel> - in this exercise you have to calculate percentages.
+	</para></listitem>
+</itemizedlist>
+
+<para>
+In each different exercise &kbruch; will generate a task and the user has to
+solve it. The program checks the input and gives a feedback about it.
+</para>
+
+<para>
+&kbruch; counts how many tasks were solved at all and how many tasks were
+solved correctly. The statistics are shown to the user.
+<!-- The user can reset the statistics at any point.-->
+</para>
+
+<para>
+&kbruch; is very compact and focuses on the core idea of a task generator. An
+online help system provides context-sensitive help for the different
+situations.
+</para>
+
+</chapter>
+
+
+<chapter id="using-kbruch">
+<title>Using &kbruch;</title>
+
+<sect1 id="mode">
+<title>Choosing the mode: learning or exercises</title>
+<para>When you start &kbruch;, it offers you two modes:
+<guilabel>Exercise</guilabel> which is the training mode and
+<guilabel>Learning</guilabel> where you can understand fractions. Clicking
+one of the pictures will enter the chosen mode. Here is a screenshot of
+&kbruch;'s mode choices:</para>
+
+<screenshot>
+	<screeninfo>&kbruch; mode choices</screeninfo>
+	<mediaobject>
+		<imageobject>
+			<imagedata fileref="gui_mode.png" format="PNG"/>
+		</imageobject>
+		<textobject>
+			<phrase>&kbruch; mode choices</phrase>
+		</textobject>
+	</mediaobject>
+</screenshot>
+<para>Click one of the picture to choose the mode.</para>
+</sect1>
+
+<sect1 id="overview">
+<title>Main Exercise Screen</title>
+
+<para>Here is a screenshot of &kbruch;'s main Exercise screen:</para>
+
+<screenshot>
+	<screeninfo>&kbruch; main screen, directly after the exercise start</screeninfo>
+	<mediaobject>
+		<imageobject>
+			<imagedata fileref="gui_main.png" format="PNG"/>
+		</imageobject>
+		<textobject>
+			<phrase>&kbruch; main screen</phrase>
+		</textobject>
+	</mediaobject>
+</screenshot>
+
+<para>
+All exercises take place in this screen. This ensures that &kbruch; is
+easy to use even for young users! The main screen is separated into 5
+parts:
+
+<itemizedlist>
+	<listitem><para>
+		the menubar with the 3 menus <guimenu>File</guimenu>,
+<guimenu>Settings</guimenu> and <guimenu>Help</guimenu>
+	</para></listitem>
+	<listitem><para>
+		the toolbar, where you can switch between the different
+exercises
+	</para></listitem>
+	<listitem><para>
+		the <guilabel>Options:</guilabel> on the left, where you can
+define the difficulty and various settings for the tasks
+	</para></listitem>
+	<listitem><para>
+		the task part, where you have to enter the result of the given task
+	</para></listitem>
+	<listitem><para>
+		the statistical part, where you can see how many tasks have been solved
+		correctly or attempted
+	</para></listitem>
+</itemizedlist>
+At any time, you can go back to Modes using the <guiicon>Back</guiicon> icon in
+the toolbar.
+</para>
+<note><para>You can hide the <guilabel>Options:</guilabel> section by dragging it to the left.
+</para></note>
+<para>
+First you have to choose an exercise in the toolbar. Default is <guilabel>Arithmetic</guilabel>. The
+task part will change according to the chosen task. Some settings in the <guilabel>Options</guilabel> section
+will be enabled, depending on the task you have chosen.
+</para>
+<para>
+You will find an icon to generate a new task in the toolbar as well. This
+action is also available in the menu
+<menuchoice><guimenu>File</guimenu><guimenuitem>New</guimenuitem></menuchoice>.
+This action is always enabled. If you have not
+solved the currently given task, a new task is generated and the statistics are set back.
+</para>
+<!--<para>
+You can hide the statistic part by dragging the vertical separator to the
+right.
+</para>-->
+<para>
+If you terminate &kbruch; the currently chosen exercise will be saved and
+restored on next startup.
+</para>
+</sect1>
+
+<sect1 id="statistics">
+<title>Statistical Part</title>
+<screenshot>
+	<screeninfo>&kbruch; statistics</screeninfo>
+	<mediaobject>
+		<imageobject>
+			<imagedata fileref="statistics.png" format="PNG"/>
+		</imageobject>
+		<textobject>
+			<phrase>&kbruch; statistics</phrase>
+		</textobject>
+	</mediaobject>
+</screenshot>
+
+<para>
+In this part of the main screen you can see:
+<itemizedlist>
+	<listitem><para>
+		on the left, how many tasks have been solved
+	</para></listitem>
+	<listitem><para>
+		on the right, in green, how many tasks have been solved correctly
+	</para></listitem>
+	<listitem><para>
+		on the right, in red, how many tasks have been solved incorrectly
+	</para></listitem>
+		<listitem><para>
+		on the right, in orange, how many tasks have been skipped
+	</para></listitem>
+</itemizedlist>
+</para>
+<para>
+You can reset the statistics by clicking on the <guimenu>New</guimenu> button
+in the toolbar or choosing <menuchoice><guimenu>File</guimenu>
+<guimenuitem>New</guimenuitem></menuchoice> in the menubar.
+</para>
+<para>
+The statistics will be saved when &kbruch; is closed and restored on next
+startup.
+</para>
+</sect1>
+
+<sect1 id="settings">
+<title>Configuring &kbruch; appearance</title>
+<para>
+In this dialog you can adjust some general settings for
+the task display. To open this dialog use
+<menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure
+&kbruch;...</guimenuitem></menuchoice>.
+</para>
+
+<screenshot>
+	<screeninfo>&kbruch; settings dialog</screeninfo>
+	<mediaobject>
+		<imageobject>
+			<imagedata fileref="settings.png" format="PNG"/>
+		</imageobject>
+		<textobject>
+			<phrase>&kbruch; settings dialog</phrase>
+		</textobject>
+	</mediaobject>
+</screenshot>
+
+<para>
+There are two sections to adjust the setting:
+<itemizedlist>
+	<!-- <listitem><para>
+		<guilabel>General</guilabel>: Set whether to show the mixed number notation in the result.
+		This notation is not known everywhere and can be disabled therefore.
+	</para></listitem> -->
+	<listitem><para>
+		<guilabel>Colors</guilabel>: Choose the colors for the different parts of a mathematical
+		expression: numbers, operational sign, fraction bar.
+	</para></listitem>
+	<listitem><para>
+		<guilabel>Fonts</guilabel>: Choose a font for displaying the task.
+	</para></listitem>
+</itemizedlist>
+</para>
+<para>
+The settings will be saved on &kbruch;'s termination and restored on the next
+startup.
+</para>
+</sect1>
+
+<sect1 id="learning-screen">
+<title>Main Learning Screen</title>
+<screenshot>
+	<screeninfo>&kbruch; learning mode</screeninfo>
+	<mediaobject>
+		<imageobject>
+			<imagedata fileref="learning.png" format="PNG"/>
+		</imageobject>
+		<textobject>
+			<phrase>&kbruch; learning mode</phrase>
+		</textobject>
+	</mediaobject>
+</screenshot>
+<para>
+Clicking the <guibutton>Hint</guibutton> button toggles the display of the help on the right which explains you how the rings work.
+</para>
+</sect1>
+</chapter>
+
+<chapter id="exercises">
+<title>Exercises</title>
+
+<sect1 id="exer_fraction">
+<title>Exercise Arithmetic</title>
+
+<para>In this exercise you have to solve a given task. Therefore you have to
+enter the integer part of a fraction and the numerator and the denominator. The difficulty of the generated task can be
+adjusted by using some options on the left.
+</para>
+
+<sect2 id="task_paras">
+<title>Options</title>
+<para>
+There are several parameters which influence the difficulty of the generated
+tasks:</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Question:</guilabel></term>
+<listitem><para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Mixed number:</guilabel></term>
+<listitem><para>Set if the fractions will appear as mixed numbers or not in the question expression ( mixed number example: 1 4/5 = 9/5 ).</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Number of terms:</guilabel></term>
+<listitem><para>The number of terms (separate fractions) given in each
+task. From 2 to 5, inclusive.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Maximum denominator:</guilabel></term>
+<listitem><para>The highest number &kbruch; will use as the main denominator in the
+tasks it sets. From a minimum of 10 to a maximum of 50.</para></listitem>
+</varlistentry>
+</variablelist>
+
+</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Answer:</guilabel></term>
+<listitem><para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Mixed number:</guilabel></term>
+<listitem><para>Set if the fractions will appear as mixed numbers or not in the answer ( mixed number example: 1 4/5 = 9/5 ).</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Reduced Form:</guilabel></term>
+<listitem><para>Check this to force the use of the reduced form.</para></listitem>
+</varlistentry>
+</variablelist>
+
+</para></listitem>
+</varlistentry>
+<!-- Not in v. 4.2
+<varlistentry>
+<term><guilabel>Solution</guilabel></term>
+<listitem><para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Mixed number</guilabel></term>
+<listitem><para>Set if the fractions will appear as mixed numbers or not in the solution ( mixed number example: 1 4/5 = 9/5 ).</para></listitem>
+</varlistentry>
+</variablelist>
+
+</para></listitem>
+</varlistentry>
+-->
+
+<varlistentry>
+<term><guilabel>Operations:</guilabel></term>
+<listitem><para>Operations which should be used in the
+task: <guilabel>Addition:</guilabel>, <guilabel>Subtraction:</guilabel>,
+<guilabel>Multiplication:</guilabel> or <guilabel>Division:</guilabel>. Check all operations
+ you want to use.</para></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para>
+After you have changed the parameters you have to click on the <guimenu>New</guimenu>
+button in the toolbar to generate a task which uses the new
+parameters. You can also call this action from the menubar with
+<menuchoice><guimenu>File</guimenu><guimenuitem>New</guimenuitem></menuchoice>.
+This will reset the statistics. To avoid that, click the <guibutton>Next</guibutton>
+button to proceed with the changed parameters.
+</para>
+<!--<note>
+<para>
+Your selection of the maximum main denominator will be reset to a default
+value every time you change the number of terms. So you should change the
+number of terms first and then select the maximum main denominator.
+</para>
+</note>-->
+<!--para>
+If you have not solved the current task and call the <guimenu>New</guimenu>
+action, the task will be counted as not solved correctly. To
+prevent this you have to change the parameters after you solved the task but
+before generating a new one.
+</para-->
+<para>
+The chosen parameters will be saved on &kbruch;'s termination and restored
+on next startup.
+</para>
+</sect2>
+
+<sect2 id="exer_fraction_solve_task">
+<title>Solving Tasks</title>
+<para>
+After you have solved a given task, you need to enter the result into the three
+input boxes. In the left box you enter the integer part of the fraction, in the
+upper box the numerator and in the lower box the denominator.
+If the option <guilabel>Mixed number:</guilabel> in the <guilabel>Answer:</guilabel>
+section is unchecked, the left box for the integer part of the fraction is hidden. Then you use
+only the numerator box and the denominator box for your input.
+</para>
+<para>
+If the result is negative, you can enter a minus sign in front of the numerator
+or denominator. If the result is 0, just type a 0 in the numerator input field.
+If the result has a denominator of 1, you can leave the lower box empty.
+</para>
+<para>
+After you have entered the result you should click the <guibutton>Check</guibutton>
+button below the input boxes. &kbruch; will check your input
+and present the correct result on the right below the <guilabel>Incorrect!</guilabel> string:
+</para>
+<screenshot>
+<screeninfo>Checked Task</screeninfo>
+<mediaobject>
+  <imageobject>
+		<imagedata fileref="checked.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+    <phrase>Checked Task</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+<para>
+This task was solved incorrectly. The correct value is shown in 2 different
+forms: normal (reduced) and mixed number.
+</para>
+<note>
+<para>
+If you checked the <guilabel>Reduced form:</guilabel> in the Options in the <guilabel>Answers:</guilabel> section
+then you always have to enter the result reduced. &kbruch; will show you a short message
+like the one in the screenshot below, if you enter the correct result
+unreduced. The answer will then be counted as incorrect.
+</para>
+</note>
+<screenshot>
+<screeninfo>Unreduced Result</screeninfo>
+<mediaobject>
+  <imageobject>
+		<imagedata fileref="reduced.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+    <phrase>Unreduced Result</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+
+<para>
+To continue with the next task, click on the <guibutton>Next</guibutton>
+button. If you want to change the parameters for the next task please do this
+before clicking on the <guibutton>Next</guibutton> button.
+</para>
+</sect2>
+</sect1>
+
+<sect1 id="exer_compare">
+<title>Exercise Comparison</title>
+
+<para>In this exercise you have to compare 2 given fractions. You have to choose
+the bigger fraction of both by selecting the correct comparison sign.
+</para>
+
+<screenshot>
+<screeninfo>Exercise Comparison</screeninfo>
+<mediaobject>
+  <imageobject>
+		<imagedata fileref="compare.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+    <phrase>Exercise Comparison</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+
+<para>First choose the correct comparison sign. After you have
+chosen the comparison sign, the result will show on the right. A green square with <guilabel>Correct!</guilabel>
+will tell you that your answer was correct while a red square with <guilabel>Incorrect!</guilabel> will indicate that your
+answer was wrong. You will get to the next task by clicking the <guibutton>Next</guibutton>
+button.
+</para>
+
+<para>In this exercise only the option <guilabel>Mixed number:</guilabel> is enabled. If checked the fractions will appear as mixed numbers.</para>
+</sect1>
+
+<sect1 id="exer_convert">
+<title>Exercise Conversion</title>
+
+<para>In this exercise you have to convert a given number into a fraction. You
+have to enter numerator and denominator.
+</para>
+
+<screenshot>
+<screeninfo>Exercise Conversion</screeninfo>
+<mediaobject>
+  <imageobject>
+		<imagedata fileref="convert.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+    <phrase>Exercise Conversion</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+
+<para>On the left side of the equal sign in the screenshot above you can see a
+recurring decimal. This means, that the fraction shown as a decimal has a
+repeating part. The repeating part is marked with the small bar above the
+numbers. Those numbers repeat ad infinitum.
+</para>
+
+<para>After you have entered the numerator and denominator click on the
+<guibutton>Check</guibutton> button. &kbruch; will check your input and
+present the correct result. After this step you will get to the next task by
+clicking on the <guibutton>Next</guibutton> button.
+</para>
+
+<note>
+<para>
+Do not forget to enter the result reduced. Unreduced results will be counted as
+solved not correctly.
+</para>
+</note>
+
+<para>In this exercise all options are disabled.</para>
+
+</sect1>
+
+<sect1 id="exer_mixed">
+<title>Exercise Mixed Numbers</title>
+
+<para>In this exercise you have to convert a given mixed number into an improper fraction (ratio) and
+vice versa. You have to enter numerator and denominator for improper fraction or a whole number,
+numerator and denominator for mixed number.
+</para>
+
+<screenshot>
+<screeninfo>Exercise Mixed Numbers</screeninfo>
+<mediaobject>
+  <imageobject>
+		<imagedata fileref="mixed.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+    <phrase>Exercise Mixed Numbers</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+
+<para>On the left side of the equal sign in the screenshot above you can see a
+mixed number. This means, that the number is made up of a whole number and a
+proper fraction. You should enter the equal improper fraction (the numerator
+part of such fraction is greater or equal to the denominator part).
+</para>
+
+<para>After you have entered the numerator and denominator click on the
+<guibutton>Check</guibutton> button. &kbruch; will check your input and
+present the correct result. After this step you will get to the next task by
+clicking on the <guibutton>Next</guibutton> button.
+</para>
+
+<note>
+<para>
+Do not forget to enter the result reduced. Unreduced results will be counted as
+solved not correctly.
+</para>
+</note>
+
+<para>In this exercise all options are disabled.</para>
+
+</sect1>
+
+<sect1 id="exer_factorize">
+<title>Exercise Factorization</title>
+
+<para>In this exercise you have to factorize a given number into its prime
+factors. You have to enter all prime factors of the number.
+</para>
+
+<screenshot>
+<screeninfo>Exercise Factorization</screeninfo>
+<mediaobject>
+  <imageobject>
+		<imagedata fileref="factorize.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+    <phrase>Exercise Factorization</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+
+<para>You can enter a factor by clicking on the prime factor
+buttons. The <quote>x</quote> sign is automatically inserted, when you click the next
+prime factor button. You can remove the last entered
+prime factor by clicking on the <guibutton>Backspace</guibutton> button.
+</para>
+<para>
+After you have entered all prime factors click on the
+<guibutton>Check</guibutton> button. &kbruch; will check your input and
+present the correct result. After this step you will get to the next task by
+clicking on the <guibutton>Next</guibutton> button.
+</para>
+
+<para>In the screenshot at the top of this page you can see a <quote>x</quote>
+between the prime factors. This is the multiplication sign. The product of all
+prime factors must be the number you try to factorize.
+</para>
+
+<note>
+<para>
+You have to enter all prime factors even when a prime factor repeats several
+times. Example: As prime factors of number 18 you have to enter 2, 3 and 3.
+</para>
+</note>
+
+<para>In this exercise all options are disabled.</para>
+
+</sect1>
+
+<sect1 id="exer_percentage">
+<title>Exercise Percentage</title>
+
+<para>In this exercise you have to answer some percentage questions.</para>
+
+<screenshot>
+<screeninfo>Exercise Percentage</screeninfo>
+<mediaobject>
+  <imageobject>
+		<imagedata fileref="percentage.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+    <phrase>Exercise Percentage</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+
+<para>
+After you have entered your answer click on the
+<guibutton>Check</guibutton> button. &kbruch; will check your input and
+present the correct result. After this step you will get to the next task by
+clicking on the <guibutton>Next</guibutton> button.
+</para>
+
+<para>In this exercise all options are disabled.</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+
+<title>Credits and License</title>
+<para>&kbruch;</para>
+<para>
+Program and documentation Copyright: 2001-2011 Sebastian Stein
+ <email>seb.kde@hpfsc.de</email>
+</para>
+
+<!-- needs update ???-->
+
+<para>Thank you goes to:</para>
+
+<itemizedlist>
+	<listitem><para>&Anne-Marie.Mahfouf; for managing the &kde; Edu project</para></listitem>
+	<listitem><para>Klas Kalass for helping design the interface</para></listitem>
+	<listitem><para>Eva Brucherseifer for writing <application>KMath</application> (&kbruch;'s &GUI; is based on this work)</para></listitem>
+	<listitem><para>Dominique Devriese for bug fixing</para></listitem>
+	<listitem><para><ulink url="http://www.net-tex.de/">Stefan Schumacher</ulink> for testing a very early version</para></listitem>
+	<listitem><para><ulink url="https://www.guckes.net/">Sven Guckes</ulink> for testing the text interface (which has been removed)</para></listitem>
+	<listitem><para>&David.Faure; for helping with &kde; <acronym>CVS</acronym> and &kde; Bugzilla</para></listitem>
+	<listitem><para>&Robert.Gogolok; for helping with &kde; <acronym>CVS</acronym></para></listitem>
+	<listitem><para>John Kesson for proof reading the handbook</para></listitem>
+</itemizedlist>
+
+<para>New interface design and usability improvements for &kde; 4.1:</para>
+<itemizedlist>
+<listitem><para>Paulo Cattai <email>paulo.cattai@ltia.fc.unesp.br</email></para></listitem>
+<listitem><para>Danilo Balzaque <email>danilo.balzaque@ltia.fc.unesp.br</email></para></listitem>
+<listitem><para>Roberto Cunha <email>roberto.cunha@ltia.fc.unesp.br</email></para></listitem>
+<listitem><para>Tadeu Araujo <email>tadeu.araujo@ltia.fc.unesp.br</email></para></listitem>
+<listitem><para>Tiago Porangaba <email>tiago.porangaba@ltia.fc.unesp.br</email></para></listitem>
+</itemizedlist>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+
+&underFDL;           <!-- FDL: do not remove -->
+&underGPL;        	 <!-- GPL License -->
+
+</chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=2:sw=2:tw=78:noet
+-->
